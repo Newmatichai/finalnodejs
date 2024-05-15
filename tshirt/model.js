@@ -1,10 +1,12 @@
+require('dotenv').config();
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'matichai',
-    password: '12345',
-    database: 'tshirtstone-db',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT || 3306,
 });
 
 async function getAll() {
@@ -24,26 +26,25 @@ async function insert(tshirt) {
     const [result] = await connection.promise().query(query, [tshirt.size, tshirt.color, tshirt.price, tshirt.productstock]);
     return { ...tshirt, id: result.insertId };
 }
-  
+
 async function update(tshirt) {
     const query = 'UPDATE Tshirt SET size = ?, color = ?, price = ?, productstock = ? WHERE id = ?';
     await connection.promise().query(query, [tshirt.size, tshirt.color, tshirt.price, tshirt.productstock, tshirt.id]);
     return tshirt;
 }
-  
+
 async function get(id) {
     const query = 'SELECT * FROM Tshirt WHERE id = ?';
     const [data] = await connection.promise().query(query, [id]);
     return data.pop();
 }
-  
+
 function save(tshirt) {
     if (!tshirt.id) {
-      return insert(tshirt);
+        return insert(tshirt);
     } else {
-      return update(tshirt);
+        return update(tshirt);
     }
 }
 
-module.exports = {getAll, remove, get,save};
-
+module.exports = { getAll, remove, get, save };

@@ -1,0 +1,13 @@
+mixin listItem(tshirt)
+  tr
+    td.line #{tshirt.id}
+    td #{tshirt.size}
+    td #{tshirt.color}
+    td #{tshirt.price}
+    td #{tshirt.productstock}
+    td.delete-product
+      a(href="/tshirt/delete/" + tshirt.id) ลบสินค้า
+    td.update-product
+      a(href="/tshirt/form/" + tshirt.id) แก้ไขสินค้า
+    td.add-product 
+      a(href="/tshirt/form") เพิ่มสินค้า

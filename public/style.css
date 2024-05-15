@@ -1,0 +1,127 @@
+table {
+    width: 50%;
+    background-color: #FFF9D0;
+    margin: auto;
+    border-spacing: 0px;
+    border-bottom: 0.1px solid #000;
+    border-top: 0.1px solid #000;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1483959651481-dc75b89291f1?q=80&w=2149&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-bottom: 5px; */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+th {
+    background-color: #5AB2FF;
+    font-weight: bold;
+    color: #000;
+    padding: 8px;
+    border-bottom: 0.5px solid #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr {
+    border: 1px solid red;
+}
+
+.line {
+    border-left: 0.5px solid #000;
+}
+
+td {    
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    /* border: 0.1px solid red; */
+    border-left: 0px;
+    border-right: 0.1px solid #000;
+    border-top: 0.1px solid #000;
+}
+
+/* tr:hover {
+    background-color: rgb(147, 212, 238);
+} */
+
+.icon{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.img-logo img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.img-tshirt {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.img-update {
+    width: 500px;
+    height: 100%;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+}
+
+/* form */
+
+.size-input {
+    margin-bottom: 0.5rem;
+}
+
+.color-input {
+    margin-bottom: 0.5rem;
+}
+
+.price-input {
+    margin-bottom: 0.5rem;
+}
+
+.Product-input {
+    margin-bottom: 0.5rem;
+}
+
+button {
+    background-color: #5AB2FF;
+    color: #000;
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 70px;
+}
+
+/* form */
+
+/* list-item */
+
+.delete-product:hover {
+    background-color: rgb(212, 69, 69);
+}
+
+.update-product:hover {
+    background-color: aqua;
+}
+
+.add-product:hover {
+    background-color: rgb(169, 219, 95);
+}
+
+/* list-item */
